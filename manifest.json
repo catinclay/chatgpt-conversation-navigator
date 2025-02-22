@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Claude 聊天助手導航器",
+  "version": "1.0.0",
+  "description": "為 Claude 聊天界面添加便捷的導航功能",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://*.anthropic.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+} 

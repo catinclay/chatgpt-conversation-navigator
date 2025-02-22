@@ -5,7 +5,7 @@ function createSidebar() {
   navigator.id = 'chat-navigator';
   navigator.innerHTML = `
     <div id="nav-trigger" class="nav-trigger">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="min-width: 36px; max-width: 36px;">
         <path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </div>
@@ -34,6 +34,13 @@ function createSidebar() {
   trigger.style.position = 'fixed';
   trigger.style.top = '40px';
   trigger.style.right = '24px';
+  trigger.style.width = '36px';
+  trigger.style.height = '36px';
+  trigger.style.display = 'flex';
+  trigger.style.alignItems = 'center';
+  trigger.style.justifyContent = 'center';
+  trigger.style.background = 'rgba(0, 0, 0, 0.1)';
+  trigger.style.borderRadius = '4px';
   
   const panel = navigator.querySelector('#nav-panel');
   const handle = navigator.querySelector('.resize-handle');

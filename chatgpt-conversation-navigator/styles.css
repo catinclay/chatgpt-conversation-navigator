@@ -4,13 +4,16 @@
 }
 
 .nav-trigger {
-  position: fixed;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   cursor: grab;
   opacity: 0.6;
-  transition: opacity 0.3s;
-  background: #2d2d2d;
-  padding: 8px;
-  border-radius: 6px;
+  transition: opacity 0.2s;
   z-index: 1000;
 }
 
@@ -24,6 +27,10 @@
 }
 
 .nav-trigger svg {
+  min-width: 36px;
+  max-width: 36px;
+  width: 36px;
+  height: 36px;
   color: #ACACBE;
   transition: color 0.2s ease;
 }
@@ -140,24 +147,42 @@
   cursor: pointer;
   display: flex;
   gap: 8px;
+  background: #343541;  /* 深色主題下稍微淺一點的背景 */
 }
 
+/* 深色主題下的懸停效果 */
 .conversation-node:hover {
-  background: #404040;
+  background: #40414F;  /* 懸停時更亮一些 */
 }
 
+/* 淺色主題下的節點背景 */
+.light-theme .conversation-node {
+  background: #f7f7f8;  /* 淺色主題下稍微深一點的背景 */
+}
+
+/* 淺色主題下的懸停效果 */
 .light-theme .conversation-node:hover {
-  background: #f0f0f0;
+  background: #e5e5e7;  /* 懸停時更深一些 */
 }
 
+/* 深色主題的邊框顏色 */
 .conversation-node.user {
-  border-left: 2px solid #19C37D;
+  border-left: 2px solid #19C37D;  /* 較亮的綠色，用於深色主題 */
   margin-left: 4px;
 }
 
 .conversation-node.assistant {
-  border-left: 2px solid #6E7CF3;
+  border-left: 2px solid #6E7CF3;  /* 較亮的藍色，用於深色主題 */
   margin-left: 8px;
+}
+
+/* 淺色主題的邊框顏色 */
+.light-theme .conversation-node.user {
+  border-left: 2px solid #10A37F !important;  /* 深綠色，用於淺色主題 */
+}
+
+.light-theme .conversation-node.assistant {
+  border-left: 2px solid #4B57D5 !important;  /* 深藍色，用於淺色主題 */
 }
 
 .node-role {

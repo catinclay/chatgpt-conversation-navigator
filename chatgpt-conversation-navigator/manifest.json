@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Claude 聊天助手導航器",
+  "name": "ChatGPT 聊天助手導航器",
   "version": "1.0.0",
-  "description": "為 Claude 聊天界面添加便捷的導航功能",
+  "description": "為 ChatGPT 聊天界面添加便捷的導航功能",
   "permissions": [],
   "content_scripts": [
     {
-      "matches": ["*://*.anthropic.com/*"],
+      "matches": ["https://chatgpt.com/*"],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
